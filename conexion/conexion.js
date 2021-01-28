@@ -1,9 +1,15 @@
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '',
+  database: 'videogames'
+  /*
   host     : 'us-cdbr-east-03.cleardb.com',
   user     : 'b72c3529e0d0ec',
   password : '8163d94a',
   database: 'heroku_0c5a3a8719c90b2'
+  */
 });
 
 connection.connect(
