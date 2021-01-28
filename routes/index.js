@@ -11,5 +11,12 @@ router.get('/nosotros', function(req, res, next) {
   res.render('nosotros', { title: 'Nosotros somos' });
 });
 
+/* GET home page (login.ejs). */
+router.get('/dash_login', function(req, res, next) {
+  res.render('dash_login', { title: 'Nosotros somos' });
+});
+
+
+
 
 module.exports = router;
