@@ -15,6 +15,8 @@ var dashPendientesAutorizar = require('./routes/dashPendientesAutorizar');
 // vagina
 // negro
 // peluda
+// grueso
+
 var app = express();
 
 // view engine setup
