@@ -11,6 +11,15 @@ body {
     color: var(--primary);
 }
 
+.card img{
+    padding: 20px;
+    width: 35%;
+    float: left;
+}
+
+.card-body h5{
+    padding: 20px;
+}
 
 a:hover {
     text-decoration: none;

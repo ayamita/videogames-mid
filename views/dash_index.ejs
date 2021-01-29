@@ -2,21 +2,15 @@
   <div id="content" class="bg-grey w-100">
     <br />
     <h1>
-      <%= title %>
+      Juegos por Autorizar
     </h1>
     <br />
-
-
     <div class="row">
-
       <% for(var Juego=0;Juego<Games.length;Juego++) { %>
-
-        <div class="col-sm-4">
-          <div class="card"
-          
-          >
-            <img height="300px" src="<%=Games[Juego].photo%>" class="card-img-top" alt="...">
+        <div class="col-md-12">
+          <div class="card">
             <div class="card-body">
+              <img height="300px" src="<%=Games[Juego].photo%>" class="card-img-top" alt="...">
               <h5 class="card-title">
                 <%=Games[Juego].title%>
               </h5>
@@ -26,10 +20,10 @@
               <h6>Fecha de lanzamiento: <%=Games[Juego].release_year%>
               </h6>
               <br/>
-
-              <!-- <a href="#" class="btn btn-primary">Comprar</a> -->
+                <a href="/autorizar/<%=Games[Juego].id_game%>" class="btn btn-primary">Autorizar</a>
+                <a href="/rechazar" class="btn btn-primary">Rechazar</a>
             </div>
-          </div>
+          </div><br>
         </div>
         <% } %>
     </div>
