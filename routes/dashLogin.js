@@ -4,7 +4,7 @@ var db=require("../conexion/conexion");
 
 /* GET home page (login.ejs). */
 router.get('/', function(req, res, next) {
-  res.render('dash_login');
+  res.render('dashLogin');
 });
 
 /* POST home page (login.ejs). */
@@ -17,7 +17,7 @@ router.post('/', function(req, res, next) {
     if (email && password) {
         db.query('SELECT * FROM users WHERE email = ? AND password = ?', [datos.email, datos.password], function(err,resultados){
             if(resultados.length > 0){
-                res.redirect('dash_index');
+                res.redirect('dashIndex');
             }else{
                 res.send('El correo o contraseña es incorrecto');
             }

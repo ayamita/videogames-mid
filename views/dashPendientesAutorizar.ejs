@@ -1,4 +1,4 @@
-<%- include layouts/dash_header.ejs %>
+<%- include layouts/dashHeader.ejs %>
   <div id="content" class="bg-grey w-100">
     <br />
     <h1>
@@ -20,12 +20,12 @@
               <h6>Fecha de lanzamiento: <%=Games[Juego].release_year%>
               </h6>
               <br/>
-                <a href="/autorizar/<%=Games[Juego].id_game%>" class="btn btn-primary">Autorizar</a>
-                <a href="/rechazar" class="btn btn-primary">Rechazar</a>
+                <a href="/dashPendientesAutorizar/autorizar/<%=Games[Juego].id_game%>" class="btn btn-primary">Autorizar</a>
+                <a href="/dashPendientesAutorizar/rechazar/<%=Games[Juego].id_game%>" class="btn btn-primary">Rechazar</a>
             </div>
           </div><br>
         </div>
         <% } %>
     </div>
   </div>
-<%- include layouts/dash_footer.ejs %>
+<%- include layouts/dashFooter.ejs %>
