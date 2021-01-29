@@ -8,7 +8,7 @@ var db=require("../conexion/conexion");
 /* GET home page (productos.ejs). */
 router.get('/', function(req, res, next) {
 
-   db.query("SELECT * FROM games", function(err,resultados){
+   db.query("SELECT * FROM games where status=1", function(err,resultados){
       console.log(resultados);
       res.render('productos', { title: 'Videogames', Games:resultados });
     });
