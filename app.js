@@ -17,6 +17,24 @@ var dashPendientesAutorizar = require('./routes/dashPendientesAutorizar');
 // peluda
 // grueso
 
+/*
+
+
+
+
+
+
+
+
+
+PENSOTE
+
+
+
+
+
+
+/*
 var app = express();
 
 // view engine setup
