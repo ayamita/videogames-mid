@@ -17,7 +17,7 @@ router.post('/', function(req, res, next) {
     if (email && password) {
         db.query('SELECT * FROM users WHERE email = ? AND password = ?', [datos.email, datos.password], function(err,resultados){
             if(resultados.length > 0){
-                res.redirect('dashIndex');
+                res.redirect('dashPendientesAutorizar');
             }else{
                 res.send('El correo o contraseña es incorrecto');
             }
