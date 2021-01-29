@@ -11,35 +11,6 @@ var dashIndex = require('./routes/dash');
 var dashLogin = require('./routes/dashLogin');
 var dashPendientesAutorizar = require('./routes/dashPendientesAutorizar');
 
-// pene 
-// vagina
-// negro
-// peluda
-// grueso
-
-<<<<<<< HEAD
-// puto
-
-=======
-/*
-
-
-
-
-
-
-
-
-
-PENSOTE
-
-
-
-
-
-
-/*
->>>>>>> 3695e98c0a70ed1b8998843eed8799d989212db2
 var app = express();
 
 // view engine setup
