@@ -30,6 +30,12 @@ app.use('/dashLogin', dashLogin);
 app.use('/dashIndex', dashIndex);
 app.use('/dashPendientesAutorizar', dashPendientesAutorizar);
 
+
+// jajaja xd
+
+
+
+
 // hola bb
 //Hola 
 // catch 404 and forward to error handler
