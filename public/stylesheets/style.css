@@ -10,17 +10,16 @@
 
   .wrapper-card{
     background-color: #fff;
-    border: 1px;
-    border-color: black;
+    border: none;
     border-radius: 13px;
-    /* width: 270px; /
-    width: 248px;
-   
-    / height: 312px; */
+   /* width: auto; */
+    height: 90%;
     padding: 15px;
     margin: 15px;
+    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
+    
   }
 
 
