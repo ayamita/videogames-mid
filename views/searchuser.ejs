@@ -1,0 +1,39 @@
+<%- include layouts/header.ejs %>
+
+  <div id="content" class="bg-grey w-100">
+    <br>
+    <h1 style="text-align: center;">Juegos</h1>
+    <br>
+    <form method="POST" class="col-md-6 position-relative d-inline-block my-6">
+      <input name="title" class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+      <button class="btn position-absolute btn-search" type="submit"><i class="icon ion-md-search"></i></button>
+    </form><br><br>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Descripción</th>           
+          <th scope="col">lanzamiento</th>
+          <th scope="col">Recomendaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var Juego=0;Juego<Games.length;Juego++) { %>
+        <tr>
+          <td><%=Games[Juego].id_game%></td>
+          <td><img  src="<%=Games[Juego].photo%>" width="150" height="200" class="card-img-top" alt="..."></td>
+          <td><%=Games[Juego].title%></td>
+          <td><%=Games[Juego].description%></td>
+          <td><%=Games[Juego].release_year%></td>
+          <td><h1><%=Games[Juego].recomendation%></h1></td>  
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+   
+  </div>
+
+  <%- include layouts/footer.ejs %>

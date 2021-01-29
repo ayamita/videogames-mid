@@ -1,20 +1,14 @@
-
 var express = require('express');
 var router = express.Router();
 var db=require("../conexion/conexion");
 
-
-
-/* GET home page (productos.ejs). */
+/*El estatus 1 significa autorizado*/ 
 router.get('/', function(req, res, next) {
-
-   db.query("SELECT * FROM games", function(err,resultados){
-      console.log(resultados);
-      res.render('productos', { title: 'Videogames', Games:resultados });
-    });
-
-    
+  db.query("SELECT * FROM games WHERE status = '1' order by recomendation desc", function(err,resultados){
+    console.log(resultados);
+    res.render('searchuser', { Games:resultados });
   });
+});
 
 //Consulta
 router.post('/', function (req, res, next) {
@@ -25,10 +19,10 @@ router.post('/', function (req, res, next) {
       return;
     }
     if (resultados.length > 0) {
-      res.render('productos', { Games:resultados });
+      res.render('searchuser', { Games:resultados });
       console.log(resultados);
     } else {
-      res.send('No existe el nombre del juego ingresado');
+      res.send('No existe el codigo de juego ingresado');
     }
     console.log(resultados);
   });
@@ -36,7 +30,3 @@ router.post('/', function (req, res, next) {
 
 
 module.exports = router;
-
-
-
-

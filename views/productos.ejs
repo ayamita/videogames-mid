@@ -5,16 +5,25 @@
       <%= title %>
     </h1>
     <br />
+    
+    <div id="content" class="bg-grey w-100">
+      <br>
+      <h1 style="text-align: center;">Juegos</h1>
+      <br>
+      <form method="POST" class="col-md-6 position-relative d-inline-block my-6">
+        <input name="title" class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn position-absolute btn-search" type="submit"><i class="icon ion-md-search"></i></button>
+      </form><br><br>
 
+
+      
 
     <div class="row">
 
       <% for(var Juego=0;Juego<Games.length;Juego++) { %>
 
         <div class="col-sm-4">
-          <div class="card"
-          
-          >
+          <div class="card">
             <img height="300px" src="<%=Games[Juego].photo%>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">
@@ -25,14 +34,14 @@
               </p>
               <h6>Fecha de lanzamiento: <%=Games[Juego].release_year%>
               </h6>
-              <br/>
+              <br />
 
               <!-- <a href="#" class="btn btn-primary">Comprar</a> -->
             </div>
           </div>
         </div>
 
-       
+
 
         <% } %>
     </div>
