@@ -12,9 +12,9 @@ var dashLogin = require('./routes/dashLogin');
 var dashPendientesAutorizar = require('./routes/dashPendientesAutorizar');
 
 // pene 
-
+// vagina
 // negro
-
+// peluda
 var app = express();
 
 // view engine setup
