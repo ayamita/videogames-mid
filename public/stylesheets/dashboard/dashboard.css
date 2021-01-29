@@ -1,7 +1,7 @@
 :root {
     --primary:#17202A;
     --light: #F1C40F ;
-    --grey: #17202A ;
+    --grey: #F0F3F4 ;
 }
 
 body {
@@ -46,6 +46,10 @@ a:hover {
 }
 
 #content {
+    position: relative;
+    padding: 50px;
+    padding-top: 10px;
+    margin-top: 0px;
     overflow-y: auto;
     height: 100vh;
     padding-bottom: 5rem;
