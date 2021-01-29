@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
     var registro = {
       title: req.body.title,
       description: req.body.description,
-      photo: req.body.photo
+      photo: req.body.photo,
+      release_year: req.body.release_year
     };
     db.query('insert into games set ?',registro, function (error, resultado) {
       if (error) {
@@ -21,6 +22,7 @@ router.get('/', function(req, res, next) {
       console.log(registro);
     });
     res.redirect('productos');
+    console.log(registro);
     console.log('La carga se efectuo correctamente');
   });
 
