@@ -11,7 +11,9 @@ var dashIndex = require('./routes/dash');
 var dashLogin = require('./routes/dashLogin');
 var dashPendientesAutorizar = require('./routes/dashPendientesAutorizar');
 var dashGames = require('./routes/dashGames');
-
+var registrouserouter = require('./routes/registrouser');
+var recomendacionuserouter = require('./routes/recomendacion');
+var userLogin = require('./routes/user_login');
 
 var app = express();
 
@@ -32,6 +34,9 @@ app.use('/dashLogin', dashLogin);
 app.use('/dashIndex', dashIndex);
 app.use('/dashPendientesAutorizar', dashPendientesAutorizar);
 app.use('/dashGames', dashGames);
+app.use('/registrouser', registrouserouter);
+app.use('/recomendacion', recomendacionuserouter);
+app.use('/user_login', userLogin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
