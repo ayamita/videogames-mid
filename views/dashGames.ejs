@@ -1,34 +1,32 @@
 <%- include layouts/dashHeader.ejs %>
   <div id="content" class="bg-grey w-100">
+    <br>
+      <h1 style="text-align: center;">Juegos</h1>
+    <br>
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">ID</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Descripción</th>           
+          <th scope="col">lanzamiento</th>
+          <th scope="col">Recomendaciones</th>
         </tr>
       </thead>
       <tbody>
+        <% for(var Juego=0;Juego<Games.length;Juego++) { %>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td><%=Games[Juego].id_game%></td>
+          <td><img  src="<%=Games[Juego].photo%>" width="150" height="200" class="card-img-top" alt="..."></td>
+          <td><%=Games[Juego].title%></td>
+          <td><%=Games[Juego].description%></td>
+          <td><%=Games[Juego].release_year%></td>
+          <td><h1><%=Games[Juego].recomendation%></h1></td>  
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
+        <% } %>
       </tbody>
     </table>
+   
   </div>
 <%- include layouts/dashFooter.ejs %>

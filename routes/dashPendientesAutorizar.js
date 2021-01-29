@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/*El estatus 1 significa autorizado*/
+/*El estatus 1 significa autorizado*/ 
 router.get('/autorizar/:id_game', function(req, res, next) {
   const { id_game } = req.params;
   db.query("UPDATE games SET status='1' WHERE id_game = ?", [id_game] ,function(err, resultados){
